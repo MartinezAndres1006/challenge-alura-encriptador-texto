@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Encriptador-De-Texto-Alura</title>
+</head>
+<body>
+    <header class="encabezado">
+        <img src="./assets/images/logo-alura.png" alt="Logo de Alura">
+    </header>
+    <main class="contenedorSecciones">
+        <section class="cajaCampo">
+            <textarea class="campoAencriptar" rows="4" cols="50" placeholder="Ingrese su texto aqui"></textarea>
+            <div class="botones">
+                <p class="mensajeAclaratorio"><img src="./assets/images/info.png" alt="Logo informacion">   Solo letras mayusculas y minusculas</p>
+                <button class="botonEncript" id="eliminarBoton">Encriptar</button>
+                <button class="botonDesencript" disabled>Desencriptar</button>
+            </div>
+
+
+        </section>
+        <section class="cajaEncript">
+            <img class="elementoAEliminar" src="./assets/images/muñeco.png" alt="Muñeco sentado con una lupa">
+            <h2 class="elementoAEliminar">Ningún mensaje fue encontrado</h2>
+            <p class="elementoAEliminar">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </section>
+    </main>
+    <footer class="piePagina">
+        <h2>Desarrollado por Andres Martinez</h2>
+    </footer>
+    <script src="./app.js"></script>
+</body>
+</html>
