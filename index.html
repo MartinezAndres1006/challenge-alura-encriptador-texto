@@ -4,32 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./assets/images/logo-alura.png" type="image/x-icon">
     <title>Encriptador-De-Texto-Alura</title>
 </head>
 <body>
     <header class="encabezado">
-        <img src="./assets/images/logo-alura.png" alt="Logo de Alura">
+        <img class="logoImg" src="./assets/images/logo-alura.png" alt="Logo de Alura">
     </header>
     <main class="contenedorSecciones">
         <section class="cajaCampo">
-            <textarea class="campoAencriptar" rows="4" cols="50" placeholder="Ingrese su texto aqui"></textarea>
-            <div class="botones">
-                <p class="mensajeAclaratorio"><img src="./assets/images/info.png" alt="Logo informacion">   Solo letras mayusculas y minusculas</p>
-                <button class="botonEncript" id="eliminarBoton">Encriptar</button>
-                <button class="botonDesencript" disabled>Desencriptar</button>
-            </div>
+                <textarea class="campoAencriptar" id="texto" rows="4" cols="50" placeholder="Ingrese su texto aqui"></textarea>
+
+                <div>
+                    <p class="mensajeAclaratorio"><i class="fa-solid fa-circle-exclamation" style="color: #6b6b6b;"></i>Solo letras mayusculas y minusculas</p>
+                    <div class="botones">
+                        <button class="botonEncript" id="eliminarBoton" onclick="encriptar()">Encriptar</button>
+                        <button class="botonDesencript" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
 
 
         </section>
         <section class="cajaEncript">
-            <img class="elementoAEliminar" src="./assets/images/muñeco.png" alt="Muñeco sentado con una lupa">
-            <h2 class="elementoAEliminar">Ningún mensaje fue encontrado</h2>
-            <p class="elementoAEliminar">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <img class="muñeco" id="fotoDom" src="./assets/images/muñeco.png" alt="Muñeco sentado con una lupa">
+            <textarea id="textoDom" rows="3" class="campoAencriptar" placeholder="Ningún mensaje fue encontrado"></textarea>
+            <p id="elementoAEliminar">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <button class="botonCopiar">Copiar</button>
         </section>
     </main>
     <footer class="piePagina">
         <h2>Desarrollado por Andres Martinez</h2>
     </footer>
+    <script src="https://kit.fontawesome.com/1e2541cc15.js" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
 </html>

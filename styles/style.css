@@ -6,23 +6,40 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 body{
 background-color: var(--color-terciario);
-
-
+position: relative;
+min-height: 100vh;
+padding-bottom: 3rem;
 }
-.encabezado {
-  margin: 40px 40px 0px 0px;
+
+
+
+
+.logoImg {
+  padding-top: 10px;
+  margin-left: 10px;
 }
 
 .contenedorSecciones {
   display: flex;
   justify-content: center;
-  align-items: center;
   gap: 20%;
-  height: 100vh;
 }
+
+.cajaCampo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20%;
+  height: 80%;
+  margin: 5%;
+  width: 40%;
+  }
+  
+
 
 
 .mensajeAclaratorio{
@@ -32,9 +49,30 @@ padding: 1em;
 font-family: var(--tipografia-parrafos);
 }
 
+.botones{
+  display: flex;
+  gap: 5%;
+}
+
+
 .botonEncript {
-  background-color: var(--color-primario); /* Green */
+  background-color: var(--color-primario);
   border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 24px;
+  width: 20.5em;
+  height: 4.188em;
+  padding: 24px;
+  gap: 8px;
+  border-radius: 24px;
+  color: var(--color-terciario);
+}
+.botonDesencript{
+ background-color: var(--color-secundario);
+  border: 2px;
+  border-color: var(--color-primario);
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -45,16 +83,19 @@ font-family: var(--tipografia-parrafos);
   gap: 8px;
   border-radius: 24px;
   color: var(--color-terciario);
+
+
 }
-.botonDesencript{
- background-color: var(--color-secundario); /* Green */
+
+.botonCopiar{
+  background-color: var(--color-secundario);
   border: 2px;
   border-color: var(--color-primario);
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   border-radius: 24px;
-  width: 328px;
+  width: 90%;
   height: 67px;
   padding: 24px;
   gap: 8px;
@@ -91,7 +132,14 @@ font-family: var(--tipografia-parrafos);
 
 }
 
+.cajaEncript img{
+width: 80%;
+
+
+
+}
 .campoAencriptar{
+  width: 80%;
   border: 0;
   font-size: 2.5em;
   outline: none;
@@ -102,14 +150,6 @@ font-family: var(--tipografia-parrafos);
 color: var(--color-primario);
 
 }
-.cajaCampo{
-display: flex;
-flex-direction: column;
-justify-content: space-evenly;
-gap: 50%;
-height: 80%;
-
-}
 
 .piePagina{
 font-size: 1.5em;
@@ -118,5 +158,55 @@ font-family: var(--tipografia-parrafos);
 color: var(--color-terciario);
 display: flex;
 justify-content: center;
-padding: 1%;
+padding: 1rem;
+position: absolute;
+bottom: 0%;
+width: 100%;
+}
+
+/* ////////////////////////////////////////////////TABLETS//////////////////////////////////////////////// */
+
+
+@media (max-width: 1200px) {
+  
+.muñeco{
+  display: none;
+}
+.contenedorSecciones{
+flex-direction: column;
+align-items: center;
+}
+.cajaEncript{
+width: 80%;
+margin-bottom: 5%;
+
+}
+.cajaCampo{
+  width: 80%;
+}
+
+.botones{
+  justify-content: center;
+}
+
+.botonEncript{
+
+  margin: 5%;
+}
+.botonDesencript{
+  margin: 5%;
+}
+
+}
+@media (max-width:933px) {
+    .botones{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap : 50%;
+    }
+
+
+
+
 }

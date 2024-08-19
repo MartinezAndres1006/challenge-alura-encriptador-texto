@@ -1,16 +1,65 @@
-let elementoVisible = true; // Variable para rastrear el estado de visibilidad
+function encriptar() {
+  let texto = document.getElementById("texto").value; 
+  let textoCifrado = texto
+    .replaceAll("a","ai")
+    .replaceAll("e","enter")
+    .replaceAll("i","imes")
+    .replaceAll("o","ober")
+    .replaceAll("u","ufat");
 
-let alternarVisibilidad = () => {
-    let elementos = document.getElementsByClassName("elementoAEliminar");
-    for (let i = 0; i < elementos.length; i++) { // Itera sobre la colección de elementos
-        if (elementoVisible) {
-            elementos[i].style.display = "none"; // Oculta cada elemento
-        } else {
-            elementos[i].style.display = "block"; // Muestra cada elemento
-        }
-    }
+  if(texto.length!=0){
+    let textoDom= document.getElementById("textoDom");
+    textoDom.innerHTML= `${textoCifrado}`;
+    let fotoDom= document.getElementById("fotoDom");
+    fotoDom.style.display = "none";
+    let parrafoDom= document.getElementById("elementoAEliminar");
+      parrafoDom.innerText= ' '
+    console.log(textoCifrado);
+    
 
-    elementoVisible = !elementoVisible; // Cambia el estado de visibilidad
-};
 
-document.getElementById("eliminarBoton").onclick = alternarVisibilidad;
+  }else{
+    let textoDom= document.getElementById("textoDom");
+    textoDom.innerHTML= `Ningún mensaje fue encontrado`;
+    let parrafoDom= document.getElementById("elementoAEliminar");
+    parrafoDom.innerText= 'Ingresa el texto que desees encriptar o desencriptar.';
+  }
+
+
+
+
+
+}
+
+function desencriptar() {
+  let texto = document.getElementById("texto").value; 
+  let textoDescifrado = texto
+    .replaceAll("ai","a")
+    .replaceAll("enter","e")
+    .replaceAll("imes","i")
+    .replaceAll("ober","o")
+    .replaceAll("ufat","u");
+
+    if(texto.length!=0){
+      let textoDom= document.getElementById("textoDom");
+      textoDom.innerHTML= `${textoDescifrado}`;
+      let parrafoDom= document.getElementById("elementoAEliminar");
+      parrafoDom.innerText= ' '
+      let fotoDom= document.getElementById("fotoDom");
+      fotoDom.style.display = "none";
+  
+      console.log(textoCifrado);
+      
+  
+  
+    }else{
+      let textoDom= document.getElementById("textoDom");
+      textoDom.innerText= `Ningún mensaje fue encontrado`;
+      let parrafoDom= document.getElementById("elementoAEliminar");
+      parrafoDom.innerText= 'Ingresa el texto que desees encriptar o desencriptar.'
+  }
+  
+
+
+
+}
