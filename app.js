@@ -53,11 +53,11 @@ function desencriptar() {
 
 
 
-
-function copiarTexto() {
-  let textarea = document.getElementById("textoDom");
-  textarea.select();
-  textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
-
-  document.execCommand("copy");
+async function copiar() {
+  const textArea = document.getElementById('textoDom');
+  try {
+      await navigator.clipboard.writeText(textArea.value);
+  } catch (err) {
+      console.error('Error al copiar el texto: ', err);
+  }
 }
